@@ -1,7 +1,9 @@
 
 body
-  font-family: 'ProximaNova Light', sans-serif
+  font-family: 'Proxima Nova Light', sans-serif
   color: $text-color
+img
+  max-width: 100%
 .section
   padding: 140px 0
   &-title
@@ -17,15 +19,26 @@ body
   font-size: 12px
   text-transform: uppercase
   color: $primary
-  font-family: 'ProximaNova Semibold', sans-serif
+  font-family: 'Proxima Nova Semibold', sans-serif
   background-color: #fff
 .button
+  text-decoration: none
   border: none
   text-transform: uppercase
   padding: 25px 45px
   background-color: $primary
   color: #fff
-  font-family: 'ProximaNova Semibold', sans-serif
+  font-family: 'Proxima Nova Semibold', sans-serif
+  &-fitting
+    color: $primary
+    background-color: #fff
+  &-add
+    background-color: lighten($primary, 10%)
+    color: #fff
+  &-like
+    height: 30px
+    width: 30px
+    border: none
 .bg-secondary
   background: $bg-secondary
 .input
