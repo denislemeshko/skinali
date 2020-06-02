@@ -144,7 +144,7 @@ img {
   font-size: 12px;
   text-transform: uppercase;
   color: #507fe1;
-  font-family: "Proxima Nova Semibold", sans-serif;
+  font-family: "ProximaNova Semibold", sans-serif;
   background-color: #fff;
 }
 
@@ -189,6 +189,53 @@ img {
 }
 .checkbox:checked + label:before {
   background-color: #507fe1;
+}
+
+.select {
+  height: 80px;
+  width: 100%;
+  padding-left: 30px;
+  border: 1px solid #dddddd;
+  position: relative;
+}
+.select:after {
+  content: "";
+  position: absolute;
+  z-index: 9;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  background: url("../img/caret.png") no-repeat center;
+  background-size: 100%;
+}
+.select:after:hover {
+  cursor: pointer;
+}
+.select_checked {
+  line-height: 80px;
+  padding-left: 30px;
+}
+.select__dropdown {
+  position: absolute;
+  top: 80px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #dddddd;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  display: none;
+}
+.select__dropdown_open {
+  display: block;
+}
+.select__option {
+  padding: 20px;
+}
+.select__option:hover {
+  background-color: #f1f1f1;
 }
 
 .checkbox-label {
@@ -290,6 +337,12 @@ img {
   height: 80px;
   width: 70px;
 }
+.menu-button:hover {
+  cursor: pointer;
+}
+.menu-button:focus {
+  outline: none;
+}
 .menu-button__line {
   display: block;
   width: 20px;
@@ -360,7 +413,7 @@ img {
   }
 }
 .offer {
-  padding: 129px 0;
+  padding: 140px 0;
 }
 .offer-block {
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
@@ -506,6 +559,11 @@ img {
   max-width: 570px;
   position: relative;
   box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1);
+  overflow-y: hidden;
+}
+.catalog-card:hover .catalog-card__buttons {
+  transform: translateY(0);
+  opacity: 1;
 }
 .catalog-card__tag {
   position: absolute;
@@ -522,6 +580,9 @@ img {
   position: absolute;
   bottom: 0;
   right: 0;
+  transition: 0.2s;
+  opacity: 0;
+  transform: translateY(100%);
 }
 .catalog-card__button {
   font-size: 11px;
@@ -532,6 +593,8 @@ img {
 }
 .catalog-card__image {
   display: block;
+  height: 379px;
+  width: 570px;
 }
 .catalog__link {
   text-align: center;
@@ -767,6 +830,7 @@ img {
 }
 .reviews-slider {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 .reviews-slider__item {
@@ -799,6 +863,14 @@ img {
   height: 10px;
   border: 10px solid transparent;
   border-top: 20px solid #fff;
+}
+
+.reviews-slider {
+  width: 100%;
+}
+
+.reviews-slider {
+  width: 100%;
 }
 
 .factory-block {
@@ -867,7 +939,7 @@ img {
 
 .footer {
   padding: 40px 0;
-  background-color: #262626;
+  background-color: #515151;
   color: #fff;
 }
 .footer-block {
